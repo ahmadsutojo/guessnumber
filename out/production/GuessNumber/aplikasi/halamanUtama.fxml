@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="338.0" prefWidth="600.0" style="-fx-background-color: grey; -fx-border-color: #ffea00;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="aplikasi.Controller">
+   <children>
+      <ImageView fitHeight="338.0" fitWidth="643.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@image/background.jpg" />
+         </image>
+      </ImageView>
+      <AnchorPane fx:id="gamePane" prefHeight="338.0" prefWidth="600.0">
+         <children>
+            <Label alignment="CENTER" layoutX="48.0" layoutY="28.0" prefHeight="48.0" prefWidth="157.0" text="TEBAK " textFill="#ffea00">
+               <font>
+                  <Font size="41.0" />
+               </font>
+            </Label>
+            <Label fx:id="jumlahMode" alignment="CENTER" layoutX="239.0" layoutY="19.0" prefHeight="78.0" prefWidth="165.0" text="0" textFill="#ffea00">
+               <font>
+                  <Font size="58.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="418.0" layoutY="28.0" prefHeight="48.0" prefWidth="157.0" text="ANGKA" textFill="#ffea00">
+               <font>
+                  <Font size="41.0" />
+               </font>
+            </Label>
+            <Label layoutX="27.0" layoutY="96.0" prefHeight="32.0" prefWidth="261.0" text="Isi Angka Tebakan ( 1 - 9 )" textFill="#ffea00">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+            <TextField fx:id="userAngka1" layoutX="26.0" layoutY="143.0" prefHeight="21.0" prefWidth="44.0">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </TextField>
+            <Label layoutX="345.0" layoutY="233.0" text="Hasil angka" textFill="#fffb00">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="userAngka2" layoutX="96.0" layoutY="143.0" prefHeight="21.0" prefWidth="44.0">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="userAngka3" layoutX="161.0" layoutY="143.0" prefHeight="21.0" prefWidth="44.0">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="userAngka4" layoutX="226.0" layoutY="143.0" prefHeight="21.0" prefWidth="44.0">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </TextField>
+            <ImageView fitHeight="142.0" fitWidth="225.0" layoutX="16.0" layoutY="196.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@image/bola.png" />
+               </image>
+            </ImageView>
+            <TextField fx:id="hasilAngka1" editable="false" layoutX="347.0" layoutY="274.0" prefHeight="21.0" prefWidth="44.0">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="hasilAngka2" editable="false" layoutX="411.0" layoutY="274.0" prefHeight="21.0" prefWidth="44.0">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="hasilAngka3" editable="false" layoutX="475.0" layoutY="274.0" prefHeight="21.0" prefWidth="44.0">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="hasilAngka4" editable="false" layoutX="531.0" layoutY="274.0" prefHeight="21.0" prefWidth="44.0">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </TextField>
+            <JFXButton layoutX="329.0" layoutY="120.0" onMouseClicked="#mulaiRoll" prefHeight="46.0" prefWidth="110.0" style="-fx-border-color: #ffea00;" text="Mulai" textFill="#ffea00" />
+            <JFXButton layoutX="463.0" layoutY="120.0" onMouseClicked="#home" prefHeight="46.0" prefWidth="110.0" style="-fx-border-color: #ffea00;" text="Back" textFill="#ffea00">
+               <ripplerFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#d32525" />
+                        <Stop color="#d7d56e" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </ripplerFill></JFXButton>
+            <JFXButton layoutX="214.0" layoutY="222.0" onMouseClicked="#reset" prefHeight="38.0" prefWidth="74.0" style="-fx-border-color: #ffea00;" text="RESET" textFill="#ffea00" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="isiSaldo" prefHeight="338.0" prefWidth="601.0" visible="false">
+         <children>
+            <Label layoutX="103.0" layoutY="19.0" prefHeight="38.0" prefWidth="449.0" text="Layanan TOP UP SDA Games" textFill="#ffea00">
+               <font>
+                  <Font name="Berlin Sans FB" size="34.0" />
+               </font>
+            </Label>
+            <TextField fx:id="jumlahTopUp" layoutX="202.0" layoutY="102.0" />
+            <Label layoutX="81.0" layoutY="107.0" text="Jumlah TOP UP" textFill="#ffea00">
+               <font>
+                  <Font name="Berlin Sans FB" size="13.0" />
+               </font>
+            </Label>
+            <ChoiceBox fx:id="jenisPembayaran" layoutX="201.0" layoutY="144.0" prefWidth="150.0" value="Poin Sikap">
+                 <items>
+                    <FXCollections fx:factory="observableArrayList">
+                       <String fx:value="Poin Sikap" />
+                       <String fx:value="Poin Bonus" />
+                    </FXCollections>
+                 </items>
+            </ChoiceBox>
+            <ImageView fitHeight="223.0" fitWidth="221.0" layoutX="373.0" layoutY="115.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@image/suzy.png" />
+               </image>
+            </ImageView>
+            <Text fill="#ffea00" layoutX="81.0" layoutY="161.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Jenis Pembayaran">
+               <font>
+                  <Font name="Berlin Sans FB" size="13.0" />
+               </font>
+            </Text>
+            <JFXButton layoutX="81.0" layoutY="229.0" mnemonicParsing="false" onMouseClicked="#topUpSaldo" prefHeight="38.0" prefWidth="135.0" style="-fx-border-color: #ffea00;" text="TOP UP" textFill="#ffea00" />
+            <JFXButton layoutX="241.0" layoutY="229.0" mnemonicParsing="false" onMouseClicked="#home" prefHeight="38.0" prefWidth="110.0" style="-fx-border-color: #ffea00;" text="Kembali" textFill="#ffea00" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="halamanDepan" prefHeight="338.0" prefWidth="600.0" visible="false">
+         <children>
+            <Label layoutX="122.0" layoutY="14.0" text="Game Tebak Angka" textFill="#ffea00">
+               <font>
+                  <Font size="39.0" />
+               </font>
+            </Label>
+            <Label layoutX="34.0" layoutY="202.0" prefHeight="26.0" prefWidth="157.0" text="Game Mode :" textFill="#ffea00">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="34.0" layoutY="114.0" prefHeight="27.0" prefWidth="90.0" text="Jumlah saldo : " textFill="#ffea00" />
+            <TextField fx:id="saldoMember" editable="false" layoutX="139.0" layoutY="115.0" prefHeight="25.0" prefWidth="149.0" />
+            <Label layoutX="65.0" layoutY="300.0" text="Reward 50x" textFill="#ffea00" />
+            <Label layoutX="260.0" layoutY="300.0" text="Reward 10x" textFill="#ffea00" />
+            <Label layoutX="454.0" layoutY="300.0" text="Reward 3x" textFill="#ffea00" />
+            <Label layoutX="315.0" layoutY="194.0" text="Bet" textFill="#ffea00">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <TextField fx:id="jumlahBet" layoutX="363.0" layoutY="192.0" />
+            <Text fill="#ffea00" layoutX="393.0" layoutY="132.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Isi Saldo" />
+            <JFXButton fx:id="mode4" layoutX="34.0" layoutY="247.0" onAction="#gamePane" prefHeight="38.0" prefWidth="142.0" style="-fx-border-color: #ffea00;" text="4D" textFill="#ffea00" />
+            <JFXButton fx:id="mode3" layoutX="218.0" layoutY="247.0" onAction="#gamePane" prefHeight="38.0" prefWidth="142.0" style="-fx-border-color: #ffea00;" text="3D" textFill="#ffea00" />
+            <JFXButton fx:id="mode2" layoutX="415.0" layoutY="247.0" onAction="#gamePane" prefHeight="38.0" prefWidth="142.0" style="-fx-border-color: #ffea00;" text="2D" textFill="#ffea00" />
+            <JFXButton layoutX="454.0" layoutY="114.0" onMouseClicked="#topup" prefHeight="25.0" prefWidth="104.0" style="-fx-border-color: #ffea00;" text="Top Up" textFill="#ffea00" />
+            <Label layoutX="109.0" layoutY="64.0" prefHeight="27.0" prefWidth="357.0" text="Aldin / 1402019011 X Assegaf / 1402019018" textFill="#ffea00">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
